@@ -10,7 +10,34 @@
   &__header {
     height: 40vh;
     background-color: blue;
-
+    &__UpFlex {
+      display: flex;
+      justify-content: space-around;
+      &__SearchPatients {
+        height: $button-size;
+        width: $button-size;
+        background-color: red;
+      }
+      &__TodayPatients {
+        height: $button-size;
+        width: $button-size;
+        background-color: skyblue;
+      }
+    }
+    &__DownFlex {
+      display: flex;
+      justify-content: space-around;
+      &__InputHold {
+        height: $button-size;
+        width: $button-size;
+        background-color: aqua;
+      }
+      &__NoninputPatients {
+        height: $button-size;
+        width: $button-size;
+        background-color: brown;
+      }
+    }
   }
   &__calender {
     height: calc(100vh - 60vh);
