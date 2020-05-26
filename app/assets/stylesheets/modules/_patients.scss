@@ -3,16 +3,17 @@
 }
 
 .side-bar {
+  float: left;
   height: 100vh;
   width: 25vw;
   background-color: green;
   &__header {
-    height: 30vh;
+    height: 40vh;
     background-color: blue;
 
   }
   &__calender {
-    height: calc(100vh - 50vh);
+    height: calc(100vh - 60vh);
     background-color: yellow;
   }
   &__fotter {
@@ -20,5 +21,20 @@
     background-color: silver;
   }
 }
+.patient-list {
+  float: left;
+  height: 100vh;
+  width: calc(100vw - 25vw);
+  background-color: skyblue;
+  &__header {
+    height: 15vh;
+    background-color: springgreen;
+  }
+  &__list {
+    height: calc(100vh - 15vh);
+    background-color: darkorange;
+  }
+}
+
 
 
