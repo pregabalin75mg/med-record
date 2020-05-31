@@ -5,27 +5,35 @@
 .side-bar {
   float: left;
   height: 100vh;
-  width: 25vw;
+  width: $side-bar-width;
   background-color: green;
 
   &__header {
-    height: $header-height;
-    background-color: blue;
+    height: $side-header-height;
+    background-color: #faf0e6;
     vertical-align: auto;
     position: relative;
+    font-weight: bold;
+    text-align: center;
+    
     &__UpFlex {
       display: flex;
       justify-content: space-around;
       padding-top: 35px;
       &__SearchPatients {
+        font-size: 2em;
         height: $button-size-height;
-        width: $button-size-width;
-        background-color: red;
+        // width: $button-size-width;
+        width: 10vw;
+        background-color: $button-color;
+        padding-top: 5px;
       }
       &__TodayPatients {
+        font-size: 2em;
         height: $button-size-height;
-        width: $button-size-width;
-        background-color: skyblue;
+        // width: $button-size-width;
+        width: 10vw;
+        background-color: $button-color;
       }
     }
 
@@ -33,41 +41,131 @@
       display: flex;
       justify-content: space-around;
       padding-top: 20px;
+      font-size: 2em;
       &__InputHold {
         height: $button-size-height;
-        width: $button-size-width;
-        background-color: aqua;
+        // width: $button-size-width;
+        width: 10vw;
+        background-color: $button-color;
       }
       &__NoninputPatients {
         height: $button-size-height;
-        width: $button-size-width;
-        background-color: brown;
+        // width: $button-size-width;
+        width: 10vw;
+        background-color: $button-color;
       }
     }
   }
 
   &__calendar {
-    height: calc(100vh - 20vh - #{$header-height});
+    height: calc(100vh - 20vh - #{$side-header-height});
     background-color: yellow;
   }
 
   &__fotter {
     height: 20vh;
     background-color: silver;
+    text-align: center;
+    overflow:hidden;
+    &__PharmacyName {
+      margin: auto;
+      line-height:40px;
+      margin-top: 10px;
+      height: 40px;
+      width: calc(#{$side-bar-width} - 30px);
+      background-color: yellowgreen;
+    }
+    &__PharmacistName {
+      margin: auto;
+      line-height:40px;
+      height: 40px;
+      width: calc(#{$side-bar-width} - 30px);
+      background-color: aqua;
+      margin-top: 10px;
+    }
+    &__LogOut {
+      margin: auto;
+      line-height:20px;
+      height: 20px;
+      width: calc(#{$side-bar-width} - 30px);
+      margin-top: 10px;
+      background-color: papayawhip;
+    }
   }
 }
 .patient-list {
   float: left;
   height: 100vh;
-  width: calc(100vw - 25vw);
+  width: $patient-list-width;
   background-color: skyblue;
+
   &__header {
-    height: 15vh;
+    height: $list-header-height;
     background-color: springgreen;
+    font-size: 20px;
+
+    &__flex {
+      padding: 10px 10px;
+      display: flex;
+      justify-content: left;
+
+      &__ReceptionOrder {
+        text-decoration: none;
+        color: $order-color;
+      }
+      &__aiueoOrder {
+        text-decoration: none;
+        color: $order-color;
+        padding-left: 20px;
+      }
+    }
   }
-  &__list {
-    height: calc(100vh - 15vh);
+  &__ListScreen {
+    height: calc(100vh - #{$list-header-height});
     background-color: darkorange;
+    &__flex {
+      height: $common-pixel;
+      display: flex;
+      background-color: teal;
+      &__ReceiptNumber {
+        width: $common-pixel;
+        background-color: red;
+        text-align: center;
+        line-height: $common-pixel;
+        font-size: 40px;
+        font-weight: bold;
+      }
+      &__PatientInfo {
+        width: $patientInfo-width; // $patient-list-width => 75vh
+        background-color: skyblue;
+        &__PatientName {
+          font-size: 50px;
+          font-weight: bold;
+          padding-left: 15px;
+        }
+        &__HospitalName {
+          font-size: 15px;
+          font-weight: bold;
+          padding-left: 20px;
+        }
+      }
+      &__Paitient-info {
+        width: calc(#{$patient-list-width} - #{$patientInfo-width});
+        background-color: violet;
+
+        &__PaitientBirthday {
+          font-size: 25px;
+          font-weight: bold;
+          padding-top: 15px;
+          padding-left: 10px;
+        }
+        &__PaitientGender {
+          font-size: 30px;
+          font-weight: bold;
+          padding-left: 50px;
+        }
+      }
+    }
   }
 }
 
