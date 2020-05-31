@@ -4,6 +4,9 @@ class DeviseCreatePharmacists < ActiveRecord::Migration[5.2]
   def change
     create_table :pharmacists do |t|
       ## Database authenticatable
+      t.string :name,               null: false
+      t.integer :employee_number,    null: false
+      t.string :pharmacy_name,       null: false
       t.string :email,              null: false, default: ""
       t.string :encrypted_password, null: false, default: ""
 
@@ -36,6 +39,7 @@ class DeviseCreatePharmacists < ActiveRecord::Migration[5.2]
       t.timestamps null: false
     end
 
+    add_index :pharmacists, :employee_number,      unique: true
     add_index :pharmacists, :email,                unique: true
     add_index :pharmacists, :reset_password_token, unique: true
     # add_index :pharmacists, :confirmation_token,   unique: true
