@@ -12,4 +12,6 @@
     .side-bar__fotter__PharmacyName 薬局
     .side-bar__fotter__PharmacistName 薬剤師名
     .side-bar__fotter__LogOut
+      = link_to "ログアウト", destroy_user_session_path, method: :delete
+      = link_to "ログイン", new_user_session_path
       
