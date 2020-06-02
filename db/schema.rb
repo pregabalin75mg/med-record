@@ -10,7 +10,24 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_05_31_134805) do
+ActiveRecord::Schema.define(version: 2020_06_02_044023) do
+
+  create_table "patient_users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "patients", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "name", null: false
+    t.string "furigana", null: false
+    t.date "birthday", null: false
+    t.string "sex", null: false
+    t.integer "receipt_number", null: false
+    t.integer "insurance_number", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["receipt_number"], name: "index_patients_on_receipt_number", unique: true
+  end
 
   create_table "pharmacists", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name", null: false
