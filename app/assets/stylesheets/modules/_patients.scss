@@ -6,11 +6,11 @@
   float: left;
   height: 100vh;
   width: $side-bar-width;
-  background-color: green;
+  background-color: #2f3e51;
 
   &__header {
     height: $side-header-height;
-    background-color: #faf0e6;
+    background-color: #253141;
     vertical-align: auto;
     position: relative;
     font-weight: bold;
@@ -59,12 +59,10 @@
 
   &__calendar {
     height: calc(100vh - 20vh - #{$side-header-height});
-    background-color: yellow;
   }
 
   &__fotter {
     height: 20vh;
-    background-color: silver;
     text-align: center;
     overflow:hidden;
     &__PharmacyName {
@@ -132,14 +130,14 @@
         background-color: red;
         text-align: center;
         line-height: $common-pixel;
-        font-size: 40px;
+        font-size: 3em;
         font-weight: bold;
       }
       &__PatientInfo {
         width: $patientInfo-width; // $patient-list-width => 75vh
         background-color: skyblue;
         &__PatientName {
-          font-size: 50px;
+          font-size: 2em;
           font-weight: bold;
           padding-left: 15px;
         }

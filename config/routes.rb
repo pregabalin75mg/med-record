@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
-  get 'patients/index'
+  devise_for :users, controllers: {
+    sessions: 'users/sessions',
+    registrations: 'users/registrations'
+  }
+  
   root "patients#index"
 end
