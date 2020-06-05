@@ -4,11 +4,18 @@
       = link_to "受付番号順", "#", class:"patient-list__header__flex__ReceptionOrder"
       = link_to "あいうえお順","#", class:"patient-list__header__flex__aiueoOrder"
   .patient-list__ListScreen
-    .patient-list__ListScreen__flex
-      .patient-list__ListScreen__flex__ReceiptNumber 1
-      .patient-list__ListScreen__flex__PatientInfo
-        .patient-list__ListScreen__flex__PatientInfo__PatientName Test Patient Name
-        .patient-list__ListScreen__flex__PatientInfo__HospitalName Test Hp.name
-      .patient-list__ListScreen__flex__Paitient-info
-        .patient-list__ListScreen__flex__Paitient-info__PaitientBirthday 平成91年12月63日
-        .patient-list__ListScreen__flex__Paitient-info__PaitientGender 男
+    - @patients.each do |patient|
+      .patient-list__ListScreen__flex
+        .patient-list__ListScreen__flex__ReceiptNumber 
+          = patient.receipt_number
+        .patient-list__ListScreen__flex__PatientInfo
+          .patient-list__ListScreen__flex__PatientInfo__flex
+            .patient-list__ListScreen__flex__PatientInfo__flex__PatientName 
+              = patient.name
+            .patient-list__ListScreen__flex__PatientInfo__flex__PatientFurigana
+              = patient.furigana
+          .patient-list__ListScreen__flex__PatientInfo__HospitalName Test Hp.name
+        .patient-list__ListScreen__flex__Paitient-info
+          .patient-list__ListScreen__flex__Paitient-info__PaitientBirthday 
+            = patient.birthday
+          .patient-list__ListScreen__flex__Paitient-info__PaitientGender 男
