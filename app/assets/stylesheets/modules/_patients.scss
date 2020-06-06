@@ -128,16 +128,21 @@
       &__ReceiptNumber {
         width: $common-pixel;
         background-color: red;
+        color: black;
         text-align: center;
         line-height: $common-pixel;
         font-size: 3em;
         font-weight: bold;
         border: solid 0.1px;
+        border-color: black;
+        text-decoration: none;
       }
       &__PatientInfo {
         width: $patientInfo-width; // $patient-list-width => 75vh
         background-color: skyblue;
         border: solid 1px;
+        text-decoration: none;
+        color: black;
         &__flex {
           display: flex;
           &__PatientName {

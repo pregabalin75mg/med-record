@@ -6,9 +6,9 @@
   .patient-list__ListScreen
     - @patients.each do |patient|
       .patient-list__ListScreen__flex
-        .patient-list__ListScreen__flex__ReceiptNumber 
+        = link_to "/patients/#{patient.id}", class: 'patient-list__ListScreen__flex__ReceiptNumber' do 
           = patient.receipt_number
-        .patient-list__ListScreen__flex__PatientInfo
+        = link_to "/patients/#{patient.id}", class: 'patient-list__ListScreen__flex__PatientInfo' do
           .patient-list__ListScreen__flex__PatientInfo__flex
             .patient-list__ListScreen__flex__PatientInfo__flex__PatientName 
               = patient.name
