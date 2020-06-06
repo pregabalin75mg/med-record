@@ -128,29 +128,46 @@
       &__ReceiptNumber {
         width: $common-pixel;
         background-color: red;
+        color: black;
         text-align: center;
         line-height: $common-pixel;
         font-size: 3em;
         font-weight: bold;
+        border: solid 0.1px;
+        border-color: black;
+        text-decoration: none;
       }
       &__PatientInfo {
         width: $patientInfo-width; // $patient-list-width => 75vh
         background-color: skyblue;
-        &__PatientName {
-          font-size: 2em;
-          font-weight: bold;
-          padding-left: 15px;
+        border: solid 1px;
+        text-decoration: none;
+        color: black;
+        &__flex {
+          display: flex;
+          &__PatientName {
+            font-size: 2em;
+            font-weight: bold;
+            padding-left: 15px;
+            margin-top: 10px;
+          }
+          &__PatientFurigana {
+            font-weight: bold;
+            margin-top: 20px;
+            margin-left: 50px;
+          }
         }
         &__HospitalName {
           font-size: 15px;
           font-weight: bold;
           padding-left: 20px;
+          margin-top: 10px;
         }
       }
       &__Paitient-info {
         width: calc(#{$patient-list-width} - #{$patientInfo-width});
         background-color: violet;
-
+        border: solid 1px;
         &__PaitientBirthday {
           font-size: 25px;
           font-weight: bold;
