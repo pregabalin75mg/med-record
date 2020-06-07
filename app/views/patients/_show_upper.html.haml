@@ -1,0 +1,12 @@
+.upper
+  .upper__Patient
+    .upper__Patient__Flex
+      .upper__Patient__Flex__PatientName
+        = @patient.name
+      .upper__Patient__Flex__PatientList
+        .upper__Patient__Flex__PatientList__birthday
+          = @patient.birthday
+        .upper__Patient__Flex__PatientList__sex
+          = @patient.sex
+  .upper__GoIndex
+    = link_to "患者選択画面へ", root_path
