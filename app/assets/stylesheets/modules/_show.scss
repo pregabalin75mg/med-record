@@ -57,7 +57,7 @@ li.requestPerson + li.requestPerson {
 
 .show {
   height: 200vh;
-  white-space: nowrap;
+  // white-space: nowrap;
   &__upper {
     width: 100vw;
     height: 10vh;
@@ -97,6 +97,7 @@ li.requestPerson + li.requestPerson {
   }
 
   .show__contents {
+    // 申し送り項目
     &__Request {
       
       display: flex;
@@ -107,35 +108,28 @@ li.requestPerson + li.requestPerson {
       &__CreateDate {
         text-align: center;
         background: #f0f7ff;
-        // border: dashed 2px #5b8bd0;
-        // & ul {
-        //   border-bottom: dashed 2px #5b8bd0;
-        // }
       }
       &__Content {
         text-align: center;
         background: #f0f7ff;
-        // border: dashed 2px #5b8bd0;
-        // & ul {
-        //   border-bottom: dashed 2px #5b8bd0;
-        // }
+        white-space: normal;
       }
       &__CreatePerson {
         text-align: center;
         background: #f0f7ff;
-        // border: dashed 2px #5b8bd0;
-        // & ul {
-        //   border-bottom: dashed 2px #5b8bd0;
-        // }
+        white-space: nowrap;
       }
     }
+    // 処方箋と薬歴の横並び
     &__flex {
       display: flex;
+      // 処方箋項目
       &__Prescription {
         width: 45%;
         height: 40%;
         &__upper {
           background-color: wheat;
+          // 処方日、調剤日、処方医名
           &__PrescriptionInfo {
             display: flex;
             &__PrescriptionDate {
@@ -149,7 +143,7 @@ li.requestPerson + li.requestPerson {
           margin-left: 10px;
         }
         }
-
+        // 処方項目
         &__content {
           width: 100%;
           &__flex {
@@ -174,16 +168,71 @@ li.requestPerson + li.requestPerson {
           background-color: mediumturquoise;
         }
       }
+      // 薬歴項目
       &__MedicationRecord {
-        width: 45%;
-        height: 50%;
+        width: 55%;
+        // height: 50%;
         background-color: oldlace;
         &__MedRecord {
+          margin-left: 5px;
+          // SO と AP の Flex
           &__flex {
             display: flex;
+            &__SO {
+              width: 50%;
+              word-wrap: break-all;
+              
+              &__S {
+                border: 1px solid;
+                margin-top: 5px;
+                padding-left: 5px;
+              }
+              &__O {
+                border: 1px solid;
+                margin-top: 5px;
+                padding-left: 5px;
+              }
+            }
+            &__AP {
+              margin-left: 10px;
+              width: 50%;
+              word-wrap: break-all;
+              &__A {
+                border: 1px solid;
+                margin-top: 5px;
+                padding-left: 5px;
+              }
+              &__EP {
+                border: 1px solid;
+                margin-top: 5px;
+                padding-left: 5px;
+              }
+              &__OP {
+                border: 1px solid;
+                margin-top: 5px;
+                padding-left: 5px;
+              }
+              &__CP {
+                border: 1px solid;
+                margin-top: 5px;
+                padding-left: 5px;
+              }
+            }
+          }
+        }
+        &__fotter {
+          margin-top: 5px;
+          border-top: 1px solid;
+          display: flex;
+          &__FilledOutPharmacist {
+            margin-left: 5px;
+          }
+          &__FilledOutDate {
+            margin-left: 20px;
           }
         }
       }
     }
   }
 }
+

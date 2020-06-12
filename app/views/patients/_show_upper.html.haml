@@ -22,7 +22,7 @@
       .show__contents__Request__Content
         %ul.requestContent 申し送り内容
         -# %li 申し送り内容
-        %li.requestContent 申し送り事項をここに入力ああああああああああああああああああああああああああああああああああああああ
+        %li.requestContent 申し送り事項をここに入力ああああああああああああああああああああああ
         %li.requestContent hello
       .show__contents__Request__CreatePerson
         %ul.requestPerson 作成人物
@@ -47,16 +47,35 @@
         .show__contents__flex__MedicationRecord__MedRecord
           .show__contents__flex__MedicationRecord__MedRecord__flex
             .show__contents__flex__MedicationRecord__MedRecord__flex__SO
-              .show__contents__flex__MedicationRecord__MedRecord__flex__SO__S 主訴
-              .show__contents__flex__MedicationRecord__MedRecord__flex__SO__O 客観的
+              .show__contents__flex__MedicationRecord__MedRecord__flex__SO__S 
+                %p S:
+                %P アイウエオアイウエオアイウエオアイウエオアイウエオアイウエオアイウエオアイウエオアイウエオアイウエオ
+              .show__contents__flex__MedicationRecord__MedRecord__flex__SO__O 
+                %p O:
+                %p アイウエオアイウエオアイウエオアイウエオアイウエオアイウエオアイウエオアイウエオアイウエオアイウエオ
             .show__contents__flex__MedicationRecord__MedRecord__flex__AP
-              .show__contents__flex__MedicationRecord__MedRecord__flex__AP__A 考察
-              .show__contents__flex__MedicationRecord__MedRecord__flex__AP__EP EP
-              .show__contents__flex__MedicationRecord__MedRecord__flex__AP__OP OP
-              .show__contents__flex__MedicationRecord__MedRecord__flex__AP__CP CP
-          .show__contents__flex__MedicationRecord__MedRecord__comments フリーコメント
-          .show__contents__flex__MedicationRecord__MedRecord__JusticeInquiry 紹介照会
-          .show__contents__flex__MedicationRecord__MedRecord__Hearing ヒアリング複数行
-        .show__contents__flex__MedicationRecord__FilledOutPharmacist 記入薬剤師
+              .show__contents__flex__MedicationRecord__MedRecord__flex__AP__A
+                %p 
+                %p アイウエオアイウエオアイウエオアイウエオアイウエオアイウエオアイウエオアイウエオアイウエオアイウエオ
+              .show__contents__flex__MedicationRecord__MedRecord__flex__AP__EP
+                %p EP:
+                %p アイウエオアイウエオアイウエオアイウエオアイウエオアイウエオアイウエオアイウエオアイウエオアイウエオ
+              .show__contents__flex__MedicationRecord__MedRecord__flex__AP__OP
+                %p OP:
+                %p アイウエオアイウエオアイウエオアイウエオアイウエオアイウエオアイウエオアイウエオアイウエオアイウエオ
+              .show__contents__flex__MedicationRecord__MedRecord__flex__AP__CP
+                %p CP:
+                %p アイウエオアイウエオアイウエオアイウエオアイウエオアイウエオアイウエオアイウエオアイウエオアイウエオ
+
+          .show__contents__flex__MedicationRecord__MedRecord__comments 
+          .show__contents__flex__MedicationRecord__MedRecord__JusticeInquiry 
+          .show__contents__flex__MedicationRecord__MedRecord__Hearing 
+        .show__contents__flex__MedicationRecord__fotter
+          .show__contents__flex__MedicationRecord__fotter__FilledOutPharmacist 
+            記入薬剤師名:
+            =@patient.name
+          .show__contents__flex__MedicationRecord__fotter__FilledOutDate
+            記入年月日:
+            =current_user.created_at
 
 
