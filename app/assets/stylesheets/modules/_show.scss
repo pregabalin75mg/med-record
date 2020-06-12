@@ -59,6 +59,7 @@ li.requestPerson + li.requestPerson {
   height: 200vh;
   // white-space: nowrap;
   &__upper {
+    
     width: 100vw;
     height: 10vh;
     background-color: #FFEBCD;
@@ -99,7 +100,7 @@ li.requestPerson + li.requestPerson {
   .show__contents {
     // 申し送り項目
     &__Request {
-      
+      margin-top: 10px;
       display: flex;
       font-size: 20px;
       list-style: none;
@@ -123,6 +124,8 @@ li.requestPerson + li.requestPerson {
     // 処方箋と薬歴の横並び
     &__flex {
       display: flex;
+      margin-top: 10px;
+
       // 処方箋項目
       &__Prescription {
         width: 45%;
@@ -217,6 +220,12 @@ li.requestPerson + li.requestPerson {
                 margin-top: 5px;
                 padding-left: 5px;
               }
+            }
+          }
+          &__Hearing {
+            background-color: yellowgreen;
+            p {
+              color: red;
             }
           }
         }

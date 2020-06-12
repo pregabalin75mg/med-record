@@ -55,7 +55,7 @@
                 %p アイウエオアイウエオアイウエオアイウエオアイウエオアイウエオアイウエオアイウエオアイウエオアイウエオ
             .show__contents__flex__MedicationRecord__MedRecord__flex__AP
               .show__contents__flex__MedicationRecord__MedRecord__flex__AP__A
-                %p 
+                %p A：
                 %p アイウエオアイウエオアイウエオアイウエオアイウエオアイウエオアイウエオアイウエオアイウエオアイウエオ
               .show__contents__flex__MedicationRecord__MedRecord__flex__AP__EP
                 %p EP:
@@ -70,6 +70,9 @@
           .show__contents__flex__MedicationRecord__MedRecord__comments 
           .show__contents__flex__MedicationRecord__MedRecord__JusticeInquiry 
           .show__contents__flex__MedicationRecord__MedRecord__Hearing 
+            ヒアリング:
+            - @patients.each do |patient|
+              %p= patient.name
         .show__contents__flex__MedicationRecord__fotter
           .show__contents__flex__MedicationRecord__fotter__FilledOutPharmacist 
             記入薬剤師名:

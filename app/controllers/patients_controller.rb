@@ -5,6 +5,7 @@ class PatientsController < ApplicationController
 
   def show
     @patient = Patient.find(params[:id])
+    @patients = Patient.all    # ちゃんと表示できるかの確認用なのであとで消す
   end
 
   private
