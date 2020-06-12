@@ -1,0 +1,2 @@
+class MedicationHistory < ApplicationRecord
+end
