@@ -1,12 +1,62 @@
-.upper
-  .upper__Patient
-    .upper__Patient__PatientName
-      = @patient.name
-    .upper__Patient__PatientList
-      .upper__Patient__PatientList__birthday
-        = @patient.birthday
-      .upper__Patient__PatientList__sex
-        = @patient.sex
-  .upper__GoIndex
-    = link_to root_path do
-      患者 <br> 選択 <br> 画面
+.show
+  .show__upper
+    .show__upper__Patient
+      .show__upper__Patient__PatientName
+        = @patient.name
+      .show__upper__Patient__PatientList
+        .show__upper__Patient__PatientList__birthday
+          = @patient.birthday
+        .show__upper__Patient__PatientList__sex
+          = @patient.sex
+    .show__upper__GoIndex
+      = link_to root_path do
+        患者 <br> 選択 <br> 画面
+
+  .show__contents
+    .show__contents__Request
+      .show__contents__Request__CreateDate 
+        %ul.requestDay 作成年月日
+        -# %li 作成年月日
+        %li.requestDay 1991.11.11
+        %li.requestDay 1818.11.21
+      .show__contents__Request__Content
+        %ul.requestContent 申し送り内容
+        -# %li 申し送り内容
+        %li.requestContent 申し送り事項をここに入力ああああああああああああああああああああああああああああああああああああああ
+        %li.requestContent hello
+      .show__contents__Request__CreatePerson
+        %ul.requestPerson 作成人物
+        -# %li 作成人物
+        %li.requestPerson 作成人物名を指定
+        %li.requestPerson 名無し
+    .show__contents__flex
+      .show__contents__flex__Prescription
+        .show__contents__flex__Prescription__upper
+          .show__contents__flex__Prescription__upper__PrescriptionInfo
+            .show__contents__flex__Prescription__upper__PrescriptionInfo__PrescriptionDate 処方日 1991.1.1
+            .show__contents__flex__Prescription__upper__PrescriptionInfo__DispensingDay 調剤日 1991.1.3
+          .show__contents__flex__Prescription__upper__DoctorName 処方医:doctor
+        .show__contents__flex__Prescription__content
+          .show__contents__flex__Prescription__content__flex
+            .show__contents__flex__Prescription__content__flex__medicine アムロジピン
+            .show__contents__flex__Prescription__content__flex__Dose 1錠
+          .show__contents__flex__Prescription__content__Usage 1日１回
+        .show__contents__flex__Prescription__fotter 何か
+
+      .show__contents__flex__MedicationRecord
+        .show__contents__flex__MedicationRecord__MedRecord
+          .show__contents__flex__MedicationRecord__MedRecord__flex
+            .show__contents__flex__MedicationRecord__MedRecord__flex__SO
+              .show__contents__flex__MedicationRecord__MedRecord__flex__SO__S 主訴
+              .show__contents__flex__MedicationRecord__MedRecord__flex__SO__O 客観的
+            .show__contents__flex__MedicationRecord__MedRecord__flex__AP
+              .show__contents__flex__MedicationRecord__MedRecord__flex__AP__A 考察
+              .show__contents__flex__MedicationRecord__MedRecord__flex__AP__EP EP
+              .show__contents__flex__MedicationRecord__MedRecord__flex__AP__OP OP
+              .show__contents__flex__MedicationRecord__MedRecord__flex__AP__CP CP
+          .show__contents__flex__MedicationRecord__MedRecord__comments フリーコメント
+          .show__contents__flex__MedicationRecord__MedRecord__JusticeInquiry 紹介照会
+          .show__contents__flex__MedicationRecord__MedRecord__Hearing ヒアリング複数行
+        .show__contents__flex__MedicationRecord__FilledOutPharmacist 記入薬剤師
+
+

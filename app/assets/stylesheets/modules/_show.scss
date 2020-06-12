@@ -2,39 +2,188 @@
   box-sizing: border-box;
 }
 
-.upper {
-  width: 100%;
-  height: 10vh;
-  background-color: #FFEBCD;
-  display: flex;
-  justify-content: space-between;
-  &__Patient {
-    display: flex;    
-    margin-left: 10px;
-    &__PatientName {
-      font-size: 3em;
-      font-weight: bold;
-    }
-    &__PatientList {
-      font-size: 20px;
-      margin-top: 5px;
-      margin-left: 10px;
-    }
-  }
-  &__GoIndex {
-    height: 55px;
-    font-size: 15px;
-    margin-top: 6px;
-    margin-right: 10px;
-    border: solid 1px;
-    line-height: 15px;
-    padding: 0px 20px;
-    padding-top: 5px;
-    background-color: #FFD18D;
-  }
-  &__GoIndex a{
-    color: black;
-    text-decoration: none;
-  }
+ul.requestDay {
+  border: dashed 2px #5b8bd0;
+  border-bottom: none;
+  width: 15vw;
 }
 
+li.requestDay {
+  border: dashed 2px #5b8bd0;
+  padding: 10px 0.5em;
+  width: 15vw;
+}
+
+li.requestDay + li.requestDay {
+  border: dashed 2px #5b8bd0;
+  border-top: none;
+}
+
+ul.requestContent {
+  border: dashed 2px #5b8bd0;
+  border-bottom: none;
+  width: 65vw;
+}
+
+li.requestContent {
+  border: dashed 2px #5b8bd0;
+  padding: 10px 1em;
+  width: 65vw;
+}
+
+li.requestContent + li.requestContent {
+  border: dashed 2px #5b8bd0;
+  border-top: none;
+}
+
+ul.requestPerson {
+  border: dashed 2px #5b8bd0;
+  border-bottom: none;
+  width: 20vw;
+}
+
+li.requestPerson {
+  border: dashed 2px #5b8bd0;
+  padding: 10px 1em;
+  width: 20vw;
+}
+
+li.requestPerson + li.requestPerson {
+  border: dashed 2px #5b8bd0;
+  border-top: none;
+}
+
+
+
+.show {
+  height: 200vh;
+  white-space: nowrap;
+  &__upper {
+    width: 100vw;
+    height: 10vh;
+    background-color: #FFEBCD;
+    display: flex;
+    justify-content: space-between;
+    white-space: nowrap;// ウィンドウの大きさ変更で勝手に改行されないようにする。
+    &__Patient {
+      display: flex;    
+      margin-left: 10px;
+      &__PatientName {
+        font-size: 3em;
+        font-weight: bold;
+      }
+      &__PatientList {
+        font-size: 20px;
+        margin-top: 5px;
+        margin-left: 10px;
+      }
+    }
+    &__GoIndex {
+      height: 55px;
+      font-size: 15px;
+      margin-top: 6px;
+      margin-right: 10px;
+      border: solid 1px;
+      line-height: 15px;
+      padding: 0px 20px;
+      padding-top: 5px;
+      background-color: #FFD18D;
+    }
+    &__GoIndex a{
+      color: black;
+      text-decoration: none;
+      font-weight: bold;
+    }
+  }
+
+  .show__contents {
+    &__Request {
+      
+      display: flex;
+      font-size: 20px;
+      list-style: none;
+      justify-content: center;
+      
+      &__CreateDate {
+        text-align: center;
+        background: #f0f7ff;
+        // border: dashed 2px #5b8bd0;
+        // & ul {
+        //   border-bottom: dashed 2px #5b8bd0;
+        // }
+      }
+      &__Content {
+        text-align: center;
+        background: #f0f7ff;
+        // border: dashed 2px #5b8bd0;
+        // & ul {
+        //   border-bottom: dashed 2px #5b8bd0;
+        // }
+      }
+      &__CreatePerson {
+        text-align: center;
+        background: #f0f7ff;
+        // border: dashed 2px #5b8bd0;
+        // & ul {
+        //   border-bottom: dashed 2px #5b8bd0;
+        // }
+      }
+    }
+    &__flex {
+      display: flex;
+      &__Prescription {
+        width: 45%;
+        height: 40%;
+        &__upper {
+          background-color: wheat;
+          &__PrescriptionInfo {
+            display: flex;
+            &__PrescriptionDate {
+              margin-left: 10px;
+            }
+            &__DispensingDay {
+              margin-left: 10px;
+            }
+          }
+        &__DoctorName {
+          margin-left: 10px;
+        }
+        }
+
+        &__content {
+          width: 100%;
+          &__flex {
+            display: flex;
+            &__medicine {
+              width: 90%;
+              background-color: #F5C8B3;
+            }
+            &__Dose {
+              width: 10%;
+              text-align: center;
+              background-color: yellow;
+            }
+          }
+          &__Usage {
+            width: 100%;
+            background-color: mediumaquamarine;
+          }
+        }
+        &__fotter {
+          width: 100%;
+          background-color: mediumturquoise;
+        }
+      }
+      &__MedicationRecord {
+        width: 45%;
+        height: 50%;
+        background-color: oldlace;
+        &__MedRecord {
+          &__flex {
+            display: flex;
+          }
+        }
+      }
+    }
+  }
+}
