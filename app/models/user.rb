@@ -8,4 +8,5 @@ class User < ApplicationRecord
          validates :employee_number, presence: true, uniqueness: true
          has_many :patient_user
          has_many :patients, through: :patient_users
+         has_many :medication_history
 end
