@@ -10,7 +10,35 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_06_02_044023) do
+ActiveRecord::Schema.define(version: 2020_06_12_132657) do
+
+  create_table "medication_histories", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.text "subjective"
+    t.text "objective"
+    t.text "assessment"
+    t.text "education_plan"
+    t.text "care_plan"
+    t.text "observational_plan"
+    t.text "inquiry"
+    t.text "free_comment"
+    t.text "request_items"
+    t.text "change_condition"
+    t.text "medication_status"
+    t.text "side_effects"
+    t.text "allergies"
+    t.text "concomitant_drug"
+    t.text "otc"
+    t.text "complications"
+    t.text "medical_history"
+    t.text "constitution"
+    t.text "luxury_goods"
+    t.text "pregnancy_breastfeeding"
+    t.text "height_bodywight"
+    t.text "background"
+    t.text "medicine_notebook"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "patient_users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.bigint "patient_id"
