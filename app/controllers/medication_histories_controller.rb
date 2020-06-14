@@ -1,6 +1,7 @@
 class MedicationHistoriesController < ApplicationController
   def new
-    @medication_history = MedicationHistory.new
+    # @patient = Patient.find(id: params[:format])
+    @medication_history = MedicationHistory.new(@patient)
   end
 
   def create

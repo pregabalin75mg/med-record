@@ -1,0 +1,9 @@
+.MedHistory
+  .MedHistory__header
+    .MedHistory__header__title
+    .MedHistory__header__flex
+      .MedHistory__header__flex__left 
+        -# = @medication_history.patient.name
+      .MedHistory__header__flex__right
+        = link_to root_path
+  .MedHistory__main
