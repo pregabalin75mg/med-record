@@ -13,6 +13,8 @@
 ActiveRecord::Schema.define(version: 2020_06_12_132657) do
 
   create_table "medication_histories", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "patient_id"
     t.text "subjective"
     t.text "objective"
     t.text "assessment"
