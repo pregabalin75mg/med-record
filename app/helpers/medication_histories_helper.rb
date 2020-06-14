@@ -1,0 +1,2 @@
+module MedicationHistoriesHelper
+end
