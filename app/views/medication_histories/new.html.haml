@@ -3,16 +3,29 @@
     .MedHistory__header__title 薬歴記入画面
     .MedHistory__header__flex
       .MedHistory__header__flex__left 
-        .MedHistory__header__flex__left
-          .MedHistory__header__flex__left__Name
-            .MedHistory__header__flex__left__Name__furigana
-              = @patient.furigana
-            .MedHistory__header__flex__left__Name__PatientName
-              = @patient.name
-          .MedHistory__header__flex__left__Info
-            .MedHistory__header__flex__left__Info__birthday
-              = @patient.birthday
-            .MedHistory__header__flex__left__Info__sex
-              = @patient.sex
+        .MedHistory__header__flex__left__Name
+          .MedHistory__header__flex__left__Name__furigana
+            = @patient.furigana
+          .MedHistory__header__flex__left__Name__PatientName
+            = @patient.name
+        .MedHistory__header__flex__left__Info
+          .MedHistory__header__flex__left__Info__birthday
+            = @patient.birthday
+          .MedHistory__header__flex__left__Info__sex
+            = @patient.sex
       .MedHistory__header__flex__right
+        = link_to "hello", "/patients/#{@patient.id}"
+        = link_to "ホーム画面へ", root_path
+
   .MedHistory__main
+    .MedHistory__main__left
+      = form_with model: [@patient, @medication_history] do |form|
+        = form.label :subjective, 'S', class: 'MedHistory__main__left__label'
+        %br/
+        = form.text_area :subjective, class: 'MedHistory__main__left__form'
+        %br
+        = form.label :objective, 'O', class: 'MedHistory__main__left__label'
+        %br
+        = form.text_area :objective, class: 'MedHistory__main__left__form'
+        %br
+    .MedHistory__main__right hello!
