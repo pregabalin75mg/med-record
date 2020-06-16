@@ -1,0 +1,9 @@
+= form_with model: [@patient, @medication_history] do |form|
+  = form.label :subjective, 'S', class: 'MedHistory__main__left__label'
+  %br/
+  = form.text_area :subjective, class: 'MedHistory__main__left__form'
+  %br
+  = form.label :objective, 'O', class: 'MedHistory__main__left__label'
+  %br
+  = form.text_area :objective, class: 'MedHistory__main__left__form'
+  %br
