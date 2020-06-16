@@ -1,0 +1,46 @@
+.MedHistory {
+  height: 200vh;
+  width: 100vw;
+  &__header {
+    height: calc(10vh + 30px);
+    &__title {
+      height: 30px;
+      background-color: yellowgreen;
+      text-align: center;
+      line-height: 30px;
+    }
+    &__flex {
+      display: flex;
+      height: 10vh;
+      width: 100%;
+      &__left {
+        background-color:yellow;
+        width: 75%;
+        display: flex;
+        margin-left: 10px;
+        // border: solid 1px;
+        &__Name{
+          width: 100%;
+          // background-color: blue;
+          margin-top: calc(10vh / 8);
+          font-weight: bold;
+          &__furigana {
+            font-size: 10px;
+            margin-left: 3px;
+          }
+          &__PatientName {
+            font-size: 25px;
+          }
+        }
+        &__Info {
+          // background-color: chartreuse;
+          width: 300%;
+          margin-left: 0;
+          font-weight: bold;
+          font-size: 15px;
+          margin-top: calc(10vh / 8);
+        }
+      }
+    }
+  }
+}

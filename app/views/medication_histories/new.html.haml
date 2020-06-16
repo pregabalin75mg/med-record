@@ -1,9 +1,18 @@
 .MedHistory
   .MedHistory__header
-    .MedHistory__header__title
+    .MedHistory__header__title 薬歴記入画面
     .MedHistory__header__flex
       .MedHistory__header__flex__left 
-        -# = @medication_history.patient.name
+        .MedHistory__header__flex__left
+          .MedHistory__header__flex__left__Name
+            .MedHistory__header__flex__left__Name__furigana
+              = @patient.furigana
+            .MedHistory__header__flex__left__Name__PatientName
+              = @patient.name
+          .MedHistory__header__flex__left__Info
+            .MedHistory__header__flex__left__Info__birthday
+              = @patient.birthday
+            .MedHistory__header__flex__left__Info__sex
+              = @patient.sex
       .MedHistory__header__flex__right
-        = link_to root_path
   .MedHistory__main
