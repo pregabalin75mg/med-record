@@ -1,8 +1,14 @@
+* {
+  box-sizing: border-box;
+}
+
+
 .MedHistory {
   height: 200vh;
   width: 100vw;
   &__header {
     height: calc(10vh + 30px);
+    width: 100%;
     &__title {
       height: 30px;
       background-color: yellowgreen;
@@ -18,29 +24,56 @@
         width: 75%;
         display: flex;
         margin-left: 10px;
-        // border: solid 1px;
+        border: solid 1px;
         &__Name{
-          width: 100%;
+          // width: 1000%;
           // background-color: blue;
           margin-top: calc(10vh / 8);
           font-weight: bold;
+          
           &__furigana {
+            background-color: paleturquoise;
             font-size: 10px;
             margin-left: 3px;
           }
           &__PatientName {
+            background-color: plum;
             font-size: 25px;
           }
         }
         &__Info {
           // background-color: chartreuse;
-          width: 300%;
-          margin-left: 0;
+          // width: 300%;
+          margin-left: 10px;
           font-weight: bold;
           font-size: 15px;
           margin-top: calc(10vh / 8);
         }
       }
+    }
+  }
+  &__main {
+    width: 100%;
+    display: flex;
+    margin-top: 10px;
+    &__left {
+      width: 50%;
+      &__label {
+        font-weight: bold;
+      }
+      &__form {
+        width: 90%;
+        max-width: 90%;
+        min-width: 90%;
+        min-height: 10em;
+        line-height: normal;
+      }
+    }
+    &__right {
+      width: 50%;
+      height: 100%;
+      border: solid 1px;
+      margin-top: 10px;
     }
   }
 }
