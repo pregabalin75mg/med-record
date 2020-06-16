@@ -9,7 +9,7 @@
         .show__upper__Patient__PatientList__sex
           = @patient.sex
     .show_upper__CreateMedHis
-      = link_to new_patient_medication_history_path(@patient.id) do
+      = link_to new_patient_medication_history_path(@patient) do
         薬歴作成
     .show__upper__GoIndex
       = link_to root_path do
