@@ -1,6 +1,6 @@
 .MedHistory
   .MedHistory__header
-    .MedHistory__header__title 薬歴記入画面
+    -# .MedHistory__header__title 薬歴記入画面
     .MedHistory__header__flex
       .MedHistory__header__flex__left 
         .MedHistory__header__flex__left__Name
@@ -19,5 +19,5 @@
 
   .MedHistory__main
     .MedHistory__main__left
-      = render partial: "form"
+      = render 'form'
     .MedHistory__main__right hello!
